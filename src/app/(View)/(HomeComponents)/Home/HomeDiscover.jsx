@@ -12,6 +12,7 @@ const HomeDiscover = () => {
                 start: 'top 18%',
                 end:'+=500',
                 scrub: 2,
+                
             }
         })
         tl.to('.discover_text_wrap h1', {
@@ -23,7 +24,7 @@ const HomeDiscover = () => {
     }, [])
     return (
         <>
-            <div className='home_discover_wrapper' >
+            <div className='home_discover_wrapper'  >
                 <div className='discover_text_wrap'>
                     <h1>Discover</h1>
                 </div>

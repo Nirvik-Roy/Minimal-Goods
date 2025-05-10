@@ -2,6 +2,9 @@ import HomeBanner from "./HomeBanner"
 import './Home.css'
 import HomeNavbar from "./HomeNavbar"
 import HomeDiscover from "./HomeDiscover"
+import HomeImage from "./HomeImage"
+import Categories from "./Categories"
+import Furniture from "./Furniture"
 
 const Page = () => {
   return (
@@ -11,6 +14,9 @@ const Page = () => {
       <div className="universal_container">
       <HomeNavbar/>
       <HomeDiscover/>
+      <HomeImage/>
+     <Categories/>
+     <Furniture/>
       </div>
        
       </div>
