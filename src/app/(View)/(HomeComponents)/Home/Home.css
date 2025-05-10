@@ -153,27 +153,96 @@
 .furniture_text_wrapper{
     padding-top: 80px;
     position: relative;
-    bottom: 0px;
-    height: 100%;
+    /* bottom: 5px; */
     z-index: 9999;
     transition: 0.3s linear all;
 }
 .furniture_text{
+    color: #322d2a;
+    font-family: Monotype, Helvetica, sans-serif;
+    font-size: 18.88em;
     position: absolute;
     bottom: -30px;
     left: 0;
-    font-size: 17.88em;
-    color: #322d2a;
-    font-family: Monotype, Helvetica, sans-serif;
+    letter-spacing: -15px;
     
 }
 .furniture_grid_layout{
-    height: 100vh;
-    margin-top: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+     padding-bottom: 100px;
     background-color: transparent;
+    position: relative;
+}
+.furniture_grid_layout2{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    background-color: transparent;
+    position: relative;
+}
+.furniture_grid_layout3{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding-bottom: 100px;
+    background-color: transparent;
+    position: relative;
+}
+.furniture_grid_layout4{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding-bottom: 100px;
+    background-color: transparent;
+    position: relative;
 }
 .furniture_text_main{
-    padding: 300px 0px;
-  
+    position: sticky;
+    top: 90%;
+}
+.furniture_img_1_div{
+    width: 24%;
+    height: 500px;
+}
+.furniture_img_1_div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.furniture_img_2_div{
+    width: 12%;
+    margin-top: 5%;
 
+}
+.furniture_img_2_div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.furniture_img_4_div{
+   
+    width: 18%;
+    margin-top: 30%;
+   
+}
+.furniture_img_4_div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.furniture_img_5_div{
+   
+    width: 30%;
+    margin-top: 24%;
+}
+.furniture_img_5_div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
