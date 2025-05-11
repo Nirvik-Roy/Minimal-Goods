@@ -5,10 +5,11 @@ import Image from 'next/image'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { gsap } from "gsap/gsap-core"
+import { useEffect } from 'react'
 gsap.registerPlugin(ScrollTrigger);
 export default function HomeImage (){
 
-    useGSAP(()=>{
+    useEffect(()=>{
      const tl = gsap.timeline({
         scrollTrigger:{
             trigger:'.home_image_div',

@@ -4,9 +4,10 @@ import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger);
 import Home from "@/app/page"
+import { useEffect } from "react";
 
 const HomeNavbar = () =>{
-useGSAP(()=>{
+useEffect(()=>{
     gsap.to('.nav_svg_logo',{
         width:'12.5%',
         y:0,

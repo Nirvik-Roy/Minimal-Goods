@@ -8,11 +8,11 @@ import img2 from '../../../../../Assets/61a99f1b3ba972c74f0c68a1_furniture2.jpeg
 import img3 from '../../../../../Assets/61a99f29da4f9f67e8a96c62_furniture3.jpeg'
 import img4 from '../../../../../Assets/61a99f0fd78e9995d9b714ee_furniture1.jpeg'
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 const Furniture = () => {
-    const [toggle, setToggle] = useState(1)
-    useGSAP(() => {
-        const tl = gsap.timeline()
+   
+    useEffect(() => {
+       
         gsap.to('.home_body_wrapper',{
             background:'#2e2a27',
             scrollTrigger:{

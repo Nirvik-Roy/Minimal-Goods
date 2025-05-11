@@ -2,10 +2,11 @@
 import { gsap } from "gsap/gsap-core"
 import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger);
 const HomeDiscover = () => {
 
-    useGSAP(() => {
+    useEffect(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: '.discover_text_wrap',
