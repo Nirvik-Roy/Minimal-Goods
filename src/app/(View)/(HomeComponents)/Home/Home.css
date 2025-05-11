@@ -165,7 +165,11 @@
     bottom: -30px;
     left: 0;
     letter-spacing: -15px;
+    visibility:hidden;
     
+}
+.furniture{
+    visibility: visible;
 }
 .furniture_grid_layout{
     height: 100%;
