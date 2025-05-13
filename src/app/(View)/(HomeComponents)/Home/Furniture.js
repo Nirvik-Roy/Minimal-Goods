@@ -20,7 +20,9 @@ const Furniture = () => {
                 start:'top 0%',
                 end:'bottom 65%',
                 scrub:1,
+                
             },
+           
         })
 
         gsap.to('.home_nav_wrapper',{
@@ -64,9 +66,10 @@ const Furniture = () => {
             visibility:'hidden',
             scrollTrigger:{
                 trigger:'.furniture_grid_layout',
-                start:'bottom 100%',
+                start:'top -40%',
                 end:'bottom 90%',
                 scrub:1,
+                
                 
                 
             },
@@ -76,7 +79,7 @@ const Furniture = () => {
             color:"#e6dfd7",
             scrollTrigger:{
                 trigger:'.furniture_grid_layout',
-                start:'bottom 100%',
+                start:'top -40%',
                 end:'bottom 90%',
                 scrub:1,
             },
@@ -137,7 +140,7 @@ const Furniture = () => {
             color:"#413b38",
             scrollTrigger:{
                 trigger:'.furniture_grid_layout2',
-                start:'bottom 100%',
+                start:'top -40%',
                 end:'bottom 90%',
                 scrub:1,
             },
@@ -147,7 +150,7 @@ const Furniture = () => {
             color:"#413b38",
             scrollTrigger:{
                 trigger:'.furniture_grid_layout2',
-                start:'bottom 100%',
+                start:'top -40%',
                 end:'bottom 90%',
                 scrub:1,
             },
@@ -206,7 +209,7 @@ const Furniture = () => {
             color:"#e9e2da",
             scrollTrigger:{
                 trigger:'.furniture_grid_layout3',
-                start:'bottom 100%',
+                start:'top -40%',
                 end:'bottom 90%',
                 scrub:1,
             },
@@ -216,7 +219,7 @@ const Furniture = () => {
             color:"#e9e2da",
             scrollTrigger:{
                 trigger:'.furniture_grid_layout3',
-                start:'bottom 100%',
+                start:'top -40%',
                 end:'bottom 90%',
                 scrub:1,
             },
