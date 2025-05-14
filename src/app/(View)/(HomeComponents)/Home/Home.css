@@ -10,8 +10,6 @@
 .home_body_wrapper{
     background-color: #2e2a27;
     height: 100%;
-
-    
 }
 .home_nav_wrapper{
  display: flex;
@@ -21,10 +19,8 @@
  background-color: #2e2a27;
  position: sticky;
  top: 0;
-
  z-index: 9999;
  border-bottom: 1px solid white;
-
 }
 
 .home_nav_links_wrapper p{
@@ -73,9 +69,10 @@
     
 }
 .home_image_main_wrapper5{
-    padding: 100px 0px;
-    position: sticky;
-    top: 0;
+    /* padding: 100px 0px; */
+    /* position: sticky;
+    top: 0; */
+    padding-bottom: 250px;
     
 }
 .home_image_div{

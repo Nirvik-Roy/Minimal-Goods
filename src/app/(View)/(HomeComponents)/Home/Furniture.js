@@ -11,220 +11,62 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 const Furniture = () => {
    
+
     useEffect(() => {
-       
-        gsap.to('.home_body_wrapper',{
-            background:'#2e2a27',
-            scrollTrigger:{
-                trigger:'.furniture_grid_layout',
-                start:'top 0%',
-                end:'bottom 65%',
-                scrub:1,
-                
-            },
-           
-        })
-
-        gsap.to('.home_nav_wrapper',{
-            background:'#2e2a27',
-            scrollTrigger:{
-                trigger:'.furniture_grid_layout',
-                start:'top 0%',
-                end:'bottom 65%',
-                scrub:1, 
-            }
-        })
-        gsap.to('.home_nav_wrapper p',{
-            color:'#e6dfd7',
-            scrollTrigger:{
-                trigger:'.furniture_grid_layout',
-                start:'top 0%',
-                end:'bottom 65%',
-                scrub:1, 
-            }
-        })
-        gsap.to('#Path_2',{
-            fill:'#e6dfd7',
-            scrollTrigger:{
-                trigger:'.furniture_grid_layout',
-                start:'top 0%',
-                end:'bottom 65%',
-                scrub:1, 
-            }
-        })
-        gsap.to('.furniture',{
-             color:"#e6dfd7",
-             scrollTrigger:{
-                trigger:'.furniture_grid_layout',
-                start:'top 0%',
-                end:'bottom 65%',
-                scrub:1,
-                
-            },
-        })
-        gsap.to('.furniture',{
-            visibility:'hidden',
-            scrollTrigger:{
-                trigger:'.furniture_grid_layout',
-                start:'top -40%',
-                end:'bottom 90%',
-                scrub:1,
-                
-                
-                
-            },
-        })
-        gsap.to('.decor',{
-            visibility:'visible',
-            color:"#e6dfd7",
-            scrollTrigger:{
-                trigger:'.furniture_grid_layout',
-                start:'top -40%',
-                end:'bottom 90%',
-                scrub:1,
-            },
-        })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        gsap.to('.home_body_wrapper',{
-            background:'#e6dfd7',
-            scrollTrigger:{
-                trigger:'.furniture_grid_layout2',
-                start:'top 0%',
-                end:'bottom 65%',
-                scrub:1,
-            },
-        })
-
-        gsap.to('.home_nav_wrapper',{
-            background:'#e6dfd7',
-            scrollTrigger:{
-                trigger:'.furniture_grid_layout2',
-                start:'top 0%',
-                end:'bottom 65%',
-                scrub:1, 
-            }
-        })
-        gsap.to('.home_nav_wrapper p',{
-            color:'#2e2a27',
-            scrollTrigger:{
-                trigger:'.furniture_grid_layout2',
-                start:'top 0%',
-                end:'bottom 65%',
-                scrub:1, 
-            }
-        })
-        gsap.to('#Path_2',{
-            fill:'#2e2a27',
-            scrollTrigger:{
-                trigger:'.furniture_grid_layout2',
-                start:'top 0%',
-                end:'bottom 65%',
-                scrub:1, 
-            }
-        })
-        gsap.to('.decor',{
-            visibility:'hidden',
-            color:"#413b38",
-            scrollTrigger:{
-                trigger:'.furniture_grid_layout2',
-                start:'top -40%',
-                end:'bottom 90%',
-                scrub:1,
-            },
-        })
-        gsap.to('.office',{
-            visibility:'visible',
-            color:"#413b38",
-            scrollTrigger:{
-                trigger:'.furniture_grid_layout2',
-                start:'top -40%',
-                end:'bottom 90%',
-                scrub:1,
-            },
-        })
-
-
-
-
-
-
-
-
-
-
-
-
-        gsap.to('.home_body_wrapper',{
-            background:'#2e2a27',
-            scrollTrigger:{
-                trigger:'.furniture_grid_layout3',
-                start:'top 0%',
-                end:'bottom 65%',
-                scrub:1,
-            },
-        })
-
-        gsap.to('.home_nav_wrapper',{
-            background:'#2e2a27',
-            scrollTrigger:{
-                trigger:'.furniture_grid_layout3',
-                start:'top 0%',
-                end:'bottom 65%',
-                scrub:1, 
-            }
-        })
-        gsap.to('.home_nav_wrapper p',{
-            color:'#e9e2da',
-            scrollTrigger:{
-                trigger:'.furniture_grid_layout3',
-                start:'top 0%',
-                end:'bottom 65%',
-                scrub:1, 
-            }
-        })
-        gsap.to('#Path_2',{
-            fill:'#e9e2da',
-            scrollTrigger:{
-                trigger:'.furniture_grid_layout3',
-                start:'top 0%',
-                end:'bottom 65%',
-                scrub:1, 
-            }
-        })
-        gsap.to('.office',{
-            visibility:'hidden',
-            color:"#e9e2da",
-            scrollTrigger:{
-                trigger:'.furniture_grid_layout3',
-                start:'top -40%',
-                end:'bottom 90%',
-                scrub:1,
-            },
-        })
-        gsap.to('.tech',{
-            visibility:'visible',
-            color:"#e9e2da",
-            scrollTrigger:{
-                trigger:'.furniture_grid_layout3',
-                start:'top -40%',
-                end:'bottom 90%',
-                scrub:1,
-            },
-        })
-    }, [])
+        // Section 1: furniture
+        const tl1 = gsap.timeline({
+          scrollTrigger: {
+            trigger: '.furniture_grid_layout',
+            start: 'top -10%',
+            end: 'bottom 65%',
+            scrub: 1,
+         
+          },
+        });
+    
+        tl1.to('.home_body_wrapper', { background: '#2e2a27' }, 0)
+          .to('.home_nav_wrapper', { background: '#2e2a27' }, 0)
+          .to('.home_nav_wrapper p', { color: '#e6dfd7' }, 0)
+          .to('#Path_2', { fill: '#e6dfd7' }, 0)
+          .to('.furniture', { color: '#e6dfd7', autoAlpha: 1 }, 0)
+          .to('.furniture', { autoAlpha: 0 }, 1)
+          .to('.decor', { autoAlpha: 1, color: '#e6dfd7' }, 1);
+    
+        // Section 2: decor → office
+        const tl2 = gsap.timeline({
+          scrollTrigger: {
+            trigger: '.furniture_grid_layout2',
+            start: 'top -10%',
+            end: 'bottom 65%',
+            scrub: 1,
+          },
+        });
+    
+        tl2.to('.home_body_wrapper', { background: '#e6dfd7' }, 0)
+          .to('.home_nav_wrapper', { background: '#e6dfd7' }, 0)
+          .to('.home_nav_wrapper p', { color: '#2e2a27' }, 0)
+          .to('#Path_2', { fill: '#2e2a27' }, 0)
+          .to('.decor', { autoAlpha: 0, color: '#413b38' }, 1)
+          .to('.office', { autoAlpha: 1, color: '#413b38' }, 1);
+    
+        // Section 3: office → tech
+        const tl3 = gsap.timeline({
+          scrollTrigger: {
+            trigger: '.furniture_grid_layout3',
+            start: 'top -10%',
+            end: 'bottom 65%',
+            scrub: 1,
+          },
+        });
+    
+        tl3.to('.home_body_wrapper', { background: '#2e2a27' }, 0)
+          .to('.home_nav_wrapper', { background: '#2e2a27' }, 0)
+          .to('.home_nav_wrapper p', { color: '#e9e2da' }, 0)
+          .to('#Path_2', { fill: '#e9e2da' }, 0)
+          .to('.office', { autoAlpha: 0, color: '#e9e2da' }, 1)
+          .to('.tech', { autoAlpha: 1, color: '#e9e2da' }, 1);
+      }, []);
+    
     return (
         <>
             <div className='furniture_text_main'>

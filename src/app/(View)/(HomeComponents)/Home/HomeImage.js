@@ -12,48 +12,30 @@ export default function HomeImage (){
     useEffect(()=>{
      const tl = gsap.timeline({
         scrollTrigger:{
-            trigger:'.home_image_div',
+            trigger:'.home_image_main_wrapper5',
             start:'top 15%',
-            scrub:3,
+            scrub:2,
+            pin:true,
         }
      })
      
-     gsap.to('.home_body_wrapper',{
+     tl.to('.home_body_wrapper',{
         background:'#e9e2da',
-        scrollTrigger:{
-            trigger:'.home_image_div',
-            start:'top 5%',
-            scrub:3,
-        }
-     })
-     gsap.to('.home_nav_wrapper',{
+        
+     },0)
+     tl.to('.home_nav_wrapper',{
         background:'#e9e2da',
         color:'rgb(46, 42, 39)',
-        scrollTrigger:{
-            trigger:'.home_image_div',
-            start:'top 5%',
-            scrub:3,
-            
-        }
-     })
-     gsap.to('#Path_2',{
+       
+     },0)
+     tl.to('#Path_2',{
          fill:'#332e2b',
-        scrollTrigger:{
-            trigger:'.home_image_div',
-            start:'top 5%',
-            scrub:3,
-         
-        }
-     })
-     gsap.to('.home_nav_links_wrapper p',{
+        
+     },0)
+     tl.to('.home_nav_links_wrapper p',{
         color:'#332e2b',
-        scrollTrigger:{
-            trigger:'.home_image_div',
-            start:'top 5%',
-            scrub:3,
-         
-        }
-     })
+       
+     },0)
      tl.fromTo('.home_image_div',{
         width:'500px',
         height:'500px',
@@ -63,19 +45,19 @@ export default function HomeImage (){
         height:'100vh',
         borderRadius:'0',
     
-     })
+     },0)
 
     },[])
   return(
     
     <>
-    <div className='home_image_main' >
+    
     <div className="home_image_main_wrapper5">
             <div className="home_image_div">
                 <Image alt='furtinure img' src={img}/>
             </div>
         </div>
-    </div>
+   
         
     </>
   )
