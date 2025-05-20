@@ -9,9 +9,8 @@ import { useEffect } from "react";
 const HomeNavbar = () =>{
 useEffect(()=>{
     gsap.to('.nav_svg_logo',{
-        width:'12.5%',
+        scale:1,
         y:0,
-        x:'-50%',
         duration:'0.5',
         scrollTrigger:{
             trigger:'.home_banner_wrapper',
@@ -19,11 +18,7 @@ useEffect(()=>{
             scrub:1,
             
         }
-        // scrollTrigger:{
-        //     trigger:'.home_nav_wrapper',
-        //     start:'top ',
-        //     scrub:1,
-        // }
+       
     })
 },[])
     return(
